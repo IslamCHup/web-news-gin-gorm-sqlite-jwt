@@ -4,9 +4,9 @@ import "gorm.io/gorm"
 
 type Comment struct {
 	gorm.Model
-	AuthorId    int  `json:"author_id"`
-	Author      User `gorm:"foreignKey:AuthorId"`
-	NewsId      int	 `json:"news_id"`
-	News        News `json:"news" gorm:"foreignKey:NewsId"`
+	AuthorID    int    `json:"author_ID"`
+	Author      User   `gorm:"foreignKey:AuthorID"`
+	NewsID      int    `json:"news_ID"`
+	News        News   `json:"news" gorm:"foreignKey:NewsID"`
 	TextComment string `json:"text_comment"`
 }
