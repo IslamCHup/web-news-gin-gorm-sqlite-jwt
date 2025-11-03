@@ -7,6 +7,8 @@ import (
 	"web-news-gin-gorm-sqlite-jwt/models"
 )
 
+
+
 func SetupDB() (*gorm.DB, error) {
 	db, err := gorm.Open(sqlite.Open("database/mydatabase.db"), &gorm.Config{})
 

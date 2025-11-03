@@ -5,10 +5,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"gorm.io/driver/sqlite"
+	// "gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 
-	"web-news-gin-gorm-sqlite-jwt/database"
+	// "web-news-gin-gorm-sqlite-jwt/database"
 	"web-news-gin-gorm-sqlite-jwt/models"
 )
 
@@ -36,6 +36,6 @@ func GetNewsById(db *gorm.DB) gin.HandlerFunc{
 	}
 }
 
-func 
+
 
 

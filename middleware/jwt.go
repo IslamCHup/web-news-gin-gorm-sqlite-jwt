@@ -32,7 +32,7 @@ func AuthReq() gin.HandlerFunc {
 			c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": err.Error()})
 		}
 
-		claims, ok := token.Claims.(jwt.MapClaims); 
+		claims, _ := token.Claims.(jwt.MapClaims); 
 		 
 		uidFloat, ok := claims["user_id"].(float64)
 		if !ok {
@@ -42,7 +42,7 @@ func AuthReq() gin.HandlerFunc {
 
 		user_ID := int(uidFloat)
 
-		c.Set("user_ID", userID)
+		c.Set("user_ID", user_ID)
 
 		c.Next()
 		
